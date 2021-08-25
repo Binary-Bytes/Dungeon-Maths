@@ -8,7 +8,11 @@ I Have Also Published **Dungeon Maths** on Play Store : <a href="https://play.go
 For Manual Deployment <a href="/Manual-Deployment.md">Click Here</a><br />
 For Automatic Deployment <a href="/Automatic-Deployment.md">Click Here</a><br />
 <br />
-If You Decide to Create your Own Clone of **Dungeon Maths**, Please Credit Me
+If You Decide to Create your Own Clone of **Dungeon Maths**, Please Credit Me,<br />
+I Would Appreciate That :)
+<br />
+<br />
+If You Dont Wanna Credit Me, It's Ok, Just Drop A Mail on binarybytes0011@gmail.com
 
 # Table of Content
 
@@ -17,10 +21,10 @@ If You Decide to Create your Own Clone of **Dungeon Maths**, Please Credit Me
   
 <details>
 
-<summary>TODO</summary>
+<summary>Planned</summary>
 <br />
 
-<a href="#todo">TODO</a>
+<a href="#planned-features">Planned Features</a>
 
 </details>
 
@@ -45,7 +49,7 @@ If You Decide to Create your Own Clone of **Dungeon Maths**, Please Credit Me
 
 </details>
 
-# TODO
+# Planned Features
 
 - Add More Avatars
 - Add Different Super Powers to Different Avatars
@@ -90,7 +94,7 @@ After Installing Gulp.js, Run the Following Commands in Your Terminal
 
 # or
 
-git clone https://github.com/BinaryBytes01/Dungeon-Maths
+$ git clone https://github.com/Binary-Bytes/Dungeon-Maths
 # -----------------------------------------------------------
 
 
@@ -100,21 +104,21 @@ git clone https://github.com/BinaryBytes01/Dungeon-Maths
 # ------------------------------------------------------------
 # And Then Run All These Commands One-By-One
 
-cd Dungeon-Maths
+$ cd Dungeon-Maths
 
-npm install del
-npm install gulp
-npm install gulp-concat
-npm install gulp-rename
-npm install gulp-sourcemaps
-npm install gulp-uglify
-npm install gulp-watch
+$ npm install del
+$ npm install gulp
+$ npm install gulp-concat
+$ npm install gulp-rename
+$ npm install gulp-sourcemaps
+$ npm install gulp-uglify
+$ npm install gulp-watch
 
-npm install --save-dev gulp
-npm install --save-dev gulp-autoprefixer
-npm install --save-dev gulp-clean-css
+$ npm install --save-dev gulp
+$ npm install --save-dev gulp-autoprefixer
+$ npm install --save-dev gulp-clean-css
 
-gulp
+$ gulp
 
 # And Now Open home.html in Your Browser and Enjoy the Game !!
 # ------------------------------------------------------------
