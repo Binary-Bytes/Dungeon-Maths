@@ -120,6 +120,6 @@ $ npm install --save-dev gulp-clean-css
 
 $ gulp
 
-# And Now Open home.html in Your Browser and Enjoy the Game !!
+# And Now Open index.html in Your Browser and Enjoy the Game !!
 # ------------------------------------------------------------
 ```
