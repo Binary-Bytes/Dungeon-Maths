@@ -1,0 +1,201 @@
+/*  GLOBAL SETTINGS
+================================ */
+
+*, *:before, *:after { box-sizing: border-box; }
+
+body {
+    font-size: 1em;
+    line-height: 1.7em;
+}
+
+div {
+    width: 100%;
+}
+
+img, svg {
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+@font-face {   font-family: 'icomoon';   src:
+url('../fonts/icomoon.eot?tfexbb');   src:
+url('../fonts/icomoon.eot?tfexbb#iefix') format('embedded-opentype'),
+url('../fonts/icomoon.ttf?tfexbb') format('truetype'),
+url('../fonts/icomoon.woff?tfexbb') format('woff'),
+url('../fonts/icomoon.svg?tfexbb#icomoon') format('svg');
+font-weight: normal; font-style: normal; }
+
+/*  THE GRID
+================================== */
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    text-align: initial;
+    padding: 0;
+    margin: 0;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+ }
+
+.col-1  { width: 8.333%; }
+.col-2  { width: 16.66%; }
+.col-3  { width: 25%; }
+.col-4  { width: 33.33%; }
+.col-5  { width: 41.66%; }
+.col-6  { width: 50%; }
+.col-7  { width: 58.33%; }
+.col-8  { width: 66.66%; }
+.col-9  { width: 75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width: 100%; }
+
+[class*='col'] {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: initial;
+    padding: 0;
+    margin: 0;
+}
+
+[class*='col'] [class*='col'] {
+    padding-left: 0;
+}
+
+[class*='col'] [class*='col']:last-of-type {
+    padding-left: 25px;
+    padding-right: 0;
+}
+
+[class*='col'] .row {
+    margin-top: 50px;
+}
+
+
+/*  TYPE STYLING
+================================== */
+
+p {
+    margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: 1.3em;
+    margin: 0 0 .4em 0;
+}
+
+h1 { font-size: 3.8em; }
+h2 { font-size: 3.3em; }
+h3 { font-size: 2.8em; }
+h4 { font-size: 2.3em; }
+h5 { font-size: 1.8em; }
+h6 { font-size: 1.3em; }
+
+
+/*  FORMS & INPUTS
+================================== */
+
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+textarea,
+select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    box-shadow: none;
+    font-size: 1em;
+    font-weight: normal;
+    color: #444;
+    background-color: #f4f4f4;
+    outline: none;
+    border: 1px solid rgba(0,0,0,.1);
+    border-bottom: 5px solid rgba(0,0,0,0);
+    border-radius: 4px;
+    padding: 6px 12px 1px 12px;
+    margin: 2px 0 6px 0;
+    transition: background-color .5s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input:focus,
+textarea:focus {
+    border-bottom: 5px solid #149ce0;
+    background-color: #e4e4e4;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    display: none;
+}
+
+input[type='checkbox'] + label span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    vertical-align: text-bottom;
+    background-color: #f4f4f4;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 4px;
+    padding: 0;
+    margin: 5px 10px 0 0;
+}
+
+input[type='checkbox']:checked + label span:after {
+    display: block;
+    font-family: 'icomoon';
+    font-size: 12px;
+    content: '\ea10';
+    color: #149ce0;
+    line-height: 17px;
+}
+
+input[type='radio'] + label span {
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+label {
+    font-size: .92em;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 18px;
+    margin: 10px 20px 0 2px;
+}
+
+/*  EXTRA FEATURES
+================================== */
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .75;
+    transition: opacity .5s;
+    z-index: 999;
+}

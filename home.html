@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dungeon Maths</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <meta name="description" content="A Game About Dungeons, Monsters and Maths">
+    <meta name="author" content="Binary Bytes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <link rel="stylesheet" href="css/stylesheet.min.css">
+
+    <meta name=“google-site-verification” content=“LoVecM4aeeyy-9uS2P24p2crc8W4DsIEZ23GxNtGmqU” />
+</head>
+
+<body oncontextmenu="return false;">
+
+    <div id="splash"><img src="img/gui/binary_bytes_logo.png" alt="Binary Bytes Logo"></div>
+
+    <section id="game-container">
+        <div id="level-up-menu">
+            <h5>- PAUSED -</h5>
+            <div class="row strength">
+                <div class="col-2 center">
+                    <img src="img/gui/icon-strength.gif" alt="Strength">
+                    <span>lvl 1</span>
+                </div>
+                <div class="col-9">
+                    <h6>STRENGTH</h6>
+                    <p>Increases the damage you give to others damage</p>
+                    <p id="add-str"></p>
+                </div>
+            </div>
+            <div class="row dexterity">
+                <div class="col-2 center">
+                    <img src="img/gui/icon-dexterity.gif" alt="Dexterity">
+                    <span>lvl 1</span>
+                </div>
+                <div class="col-9">
+                    <h6>DEXTERITY</h6>
+                    <p>Increases your chance to avoid traps, projectiles, and enemy damage</p>
+                    <p id="add-dex"></p>
+                </div>
+            </div>
+            <div class="row endurance">
+                <div class="col-2 center">
+                    <img src="img/gui/icon-endurance.gif" alt="Endurance">
+                    <span>lvl 1</span>
+                </div>
+                <div class="col-9">
+                    <h6>ENDURANCE</h6>
+                    <p>Decreases incoming damage</p>
+                    <p id="add-end"></p>
+                </div>
+            </div>
+            <button>level up</button>
+        </div>
+
+        <div id="options-menu">
+            <div id="sound">
+                <h6>Sound</h6>
+                <input type="checkbox" id="music" onclick="backgroundMusicHandler()" />
+                <label for="music"><span></span></label>
+
+                <input type="checkbox" id="warningSound" onclick="warningSoundHandler()" />
+                <label for="warningSound"><span></span></label>
+            </div>
+            <div id="credits">
+                <h6>Developed By</h6>
+                <p>Binary Bytes &copy;<span id="year">2021</span></p>
+                <a href="#" onclick="window.open('https://binarybytes.vercel.app', '_system');">https://binarybytes.vercel.app</a>
+            </div>
+            <button id="btn-gamemodes">Game Modes</button>
+            <input type="checkbox" name="enable-tutorial" id="enable-tutorial" checked />
+            <label for="enable-tutorial"><span></span>Show Tutorial Next Time</label>
+            <div class="row">
+                <button class="return-to-main-menu">Main Menu</button>
+                <button class="btn-options"></button>
+            </div>
+            <p id="version-number"></p>
+        </div>
+
+        <div class="flip-container">
+            <div class="flipper">
+                <div id="title-screen">
+                    <img id="logo" src="img/gui/logo.png" alt="Dungeon Maths Logo">
+                    <div>
+                        <button id="btn-new-game">New Game</button>
+                        <button id="btn-continue">Continue</button>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <button id="btn-bestiary"><img src="img/enemies/cube-green.gif" alt="Bestiary"><span id="btn-bestiary-new">0</span></button>
+                            <button id="btn-fallen-heroes"></button>
+                            <button class="btn-options"></button>
+                        </div>
+                        <div class="gold-total row">
+                            <img src="img/loot/gold-5.gif" alt="Gold Total"><span></span>
+                        </div>
+                    </div>
+                </div>
+                <form id="new-game">
+                    <h5>New Game</h5>
+                    <div>
+                        <input id="name-input" type="text" placeholder="What is your name?" onfocus="this.placeholder=''" onblur="this.placeholder='What is your name?'" />
+                    </div>
+                    <div id="avatar-selector">
+                        <img id="avatar-left" src="img/gui/triangle.svg">
+                        <img id="selected-avatar" src="img/avatars/hero.gif">
+                        <img id="avatar-right" src="img/gui/triangle.svg">
+                    </div>
+                    <div>
+                        <h6>Game Modes</h6>
+                        <input type="checkbox" name="multiples" id="multiples" checked />
+                        <label for="multiples"><span></span>Multiples</label>
+                        <input type="checkbox" name="factors" id="factors" checked />
+                        <label for="factors"><span></span>Factors</label>
+                        <input type="checkbox" name="primes" id="primes" checked />
+                        <label for="primes"><span></span>Primes</label>
+                        <input type="checkbox" name="equality" id="equality" checked />
+                        <label for="equality"><span></span>Equality</label>
+                    </div>
+                    <div id="math-difficulty">
+                        <h6>Math Difficulty</h6>
+                        <div class="row">
+                            <input type="radio" name="mathradio" id="math1" value="1" checked />
+                            <label for="math1"><span></span></label>
+                            <input type="radio" name="mathradio" id="math2" value="2" />
+                            <label for="math2"><span></span></label>
+                            <input type="radio" name="mathradio" id="math3" value="3" />
+                            <label for="math3"><span></span></label>
+                        </div>
+                    </div>
+                    <div id="monster-difficulty">
+                        <h6>Monster Difficulty</h6>
+                        <div class="row">
+                            <input type="radio" name="monsterradio" id="monster1" value="1" checked />
+                            <label for="monster1"><span></span></label>
+                            <input type="radio" name="monsterradio" id="monster2" value="2" />
+                            <label for="monster2"><span></span></label>
+                            <input type="radio" name="monsterradio" id="monster3" value="3" />
+                            <label for="monster3"><span></span></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button id="btn-main-menu" type="button"></button>
+                        <button id="btn-play" type="submit">Play</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="fade-to-black">- Loading -</div>
+
+        <div id="main-container">
+            <div id="top-bar">
+                <span id="game-mode"></span>
+                <img id="warning" src="img/gui/warning.svg" alt="Enemy Warning">
+                <span class="btn-options"></span>
+                <div id="time"></div>
+            </div>
+            <div id="level-container">
+                <div id="hero-container">
+                    <div class="hero-spacer"></div>
+                    <div id="move-up"><img src="img/gui/arrow.svg"></div>
+                    <div class="hero-spacer"></div>
+
+                    <div id="move-left"><img src="img/gui/arrow.svg"></div>
+                    <div id="hero"><span class="message">miss</span><img src="img/avatars/hero.gif"><span id="hero-status"></span></div>
+                    <div id="move-right"><img src="img/gui/arrow.svg"></div>
+
+                    <div class="hero-spacer"></div>
+                    <div id="move-down"><img src="img/gui/arrow.svg"></div>
+                    <div class="hero-spacer"></div>
+                </div>
+            </div>
+            <div id="bottom-bar">
+                <div class="row">
+                    <span id="player-name">Player</span>
+                    <span id="level">Level 1</span>
+                </div>
+                <div id="healthbar">
+                    <div id="health"></div>
+                </div>
+                <div id="xpbar">
+                    <div id="xp"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="fallen-heroes"></div>
+    <div id="game-over"></div>
+    <div id="store"></div>
+    <div id="bestiary"></div>
+    <div id="tutorial"></div>
+    <div id="debug">
+        <div id ="debug-hero"></div>
+    </div>
+    <span id="btn-debug">debug</span>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
