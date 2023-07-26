@@ -14,15 +14,6 @@ I Would Appreciate That :)
 
 <details>
 <summary>Content</summary><br />
-  
-<details>
-
-<summary>Planned</summary>
-<br />
-
-<a href="#planned-features">Planned Features</a>
-
-</details>
 
 <details>
 <summary>Features</summary>
@@ -44,12 +35,6 @@ I Would Appreciate That :)
 </details>
 
 </details>
-
-# Planned Features
-
-- Add More Avatars
-- Add Different Super Powers to Different Avatars
-- Add More Health to Different Avatars
 
 # Features
 
