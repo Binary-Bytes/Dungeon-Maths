@@ -3,7 +3,6 @@
 A Game About Dungeons, Monsters and ...Maths ?<br />
 <br />
 You can Play it Here - <a href="https://Binary-Bytes.github.io/Dungeon-Maths/"><strong>Dungeon Maths</strong></a><br />
-<strong>Click Here to View it on Play Store</strong></a><br />
 <br />
 For Manual Deployment <a href="/Manual-Deployment.md">Click Here</a><br />
 For Automatic Deployment <a href="/Automatic-Deployment.md">Click Here</a><br />
