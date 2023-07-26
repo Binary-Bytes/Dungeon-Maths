@@ -2,17 +2,14 @@
 
 A Game About Dungeons, Monsters and ...Maths ?<br />
 <br />
-You can Play it Here - <a href="https://dungeon-maths.herokuapp.com/"><strong>Dungeon Maths</strong></a><br />
-I Have Also Published **Dungeon Maths** on Play Store : <a href="https://play.google.com/store/apps/details?id=com.binarybytes.dungeonmaths"><strong>Click Here to View it on Play Store</strong></a><br />
+You can Play it Here - <a href="https://Binary-Bytes.github.io/Dungeon-Maths/"><strong>Dungeon Maths</strong></a><br />
+<strong>Click Here to View it on Play Store</strong></a><br />
 <br />
 For Manual Deployment <a href="/Manual-Deployment.md">Click Here</a><br />
 For Automatic Deployment <a href="/Automatic-Deployment.md">Click Here</a><br />
 <br />
 If You Decide to Create your Own Clone of **Dungeon Maths**, Please Credit Me,<br />
 I Would Appreciate That :)
-<br />
-<br />
-If You Dont Wanna Credit Me, It's Ok, Just Drop A Mail on binarybytes0011@gmail.com
 
 # Table of Content
 
